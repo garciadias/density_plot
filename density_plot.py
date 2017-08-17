@@ -6,7 +6,7 @@ date: Aug. 17, 2017
 """
 from numpy import squeeze, ones, where
 from astropy.io import fits
-from matplotlib.pyplot import hist2d, figure, ylabel, tight_layout, colorbar, show, xlabel, cm
+from matplotlib.pyplot import hist2d, figure, ylabel, tight_layout, colorbar, show, xlabel, cm, savefig
 
 # getting the data
 filename_field = 'https://dr14.sdss.org/sas/dr14/apogee/spectro/redux/r8/stars/l31c/l31c.2/2001/aspcapField-2001.fits'
@@ -42,4 +42,5 @@ cbar = colorbar()
 xlabel('wavelength ($\AA$)', fontsize=18)
 ylabel('Norm. Flux', fontsize=18)
 tight_layout()
+savefig('test.png')
 show()
